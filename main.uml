@@ -1,0 +1,44 @@
+@startuml
+class Boat {
+    {field} speed: float
+            acceleration: float
+            maneuverability: float
+            robustness: float
+}
+
+class UserBoat {
+
+}
+
+class Obstacle {
+
+}
+
+class StaticObstacle {
+
+}
+
+class SimpleDynamicObstacle {
+
+}
+
+class ComplexDynamicObstacle {
+
+}
+
+class Rock {
+
+}
+
+class TreeBranches {
+
+}
+
+class Geese {
+
+}
+
+class Ducks {
+
+}
+@enduml
