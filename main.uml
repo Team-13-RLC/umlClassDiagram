@@ -10,11 +10,19 @@ class UserBoat {
 
 }
 
+class AIBoat{
+
+}
+
 class Obstacle {
 
 }
 
 class StaticObstacle {
+
+}
+
+class DynamicObstacle {
 
 }
 
@@ -41,4 +49,19 @@ class Geese {
 class Ducks {
 
 }
+
+Boat <|-- UserBoat
+Boat <|-- AIBoat
+
+
+Obstacle <|-- StaticObstacle
+Obstacle <|-- DynamicObstacle
+DynamicObstacle <|-- ComplexDynamicObstacle
+DynamicObstacle <|-- SimpleDynamicObstacle
+StaticObstacle <|-- Rock
+SimpleDynamicObstacle <|-- TreeBranches
+ComplexDynamicObstacle <|-- Geese
+ComplexDynamicObstacle <|-- Ducks
+
+
 @enduml
