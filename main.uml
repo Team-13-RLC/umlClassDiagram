@@ -1,4 +1,9 @@
 @startuml
+
+class Sprite {
+
+}
+
 class Boat {
     {field} speed: float
             acceleration: float
@@ -14,8 +19,21 @@ class AIBoat{
 
 }
 
-class Obstacle {
+class Lane {
 
+}
+
+class UserLane {
+
+}
+
+class AILane {
+
+}
+
+class Obstacle {
+    {field} positionX: float
+            positionY: float
 }
 
 class StaticObstacle {
@@ -23,6 +41,8 @@ class StaticObstacle {
 }
 
 class DynamicObstacle {
+    {field} velocityX: float
+            velocityY: float
 
 }
 
@@ -35,7 +55,6 @@ class ComplexDynamicObstacle {
 }
 
 class Rock {
-
 }
 
 class TreeBranches {
@@ -50,9 +69,15 @@ class Ducks {
 
 }
 
+Lane <|-- UserLane
+Lane <|-- AILane
+
+
+Sprite <|-- Boat
+Sprite <|-- Obstacle
+
 Boat <|-- UserBoat
 Boat <|-- AIBoat
-
 
 Obstacle <|-- StaticObstacle
 Obstacle <|-- DynamicObstacle
