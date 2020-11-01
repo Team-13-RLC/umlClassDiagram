@@ -1,0 +1,70 @@
+@startuml
+
+class Position{
+	float x
+	float y
+}
+class Stats{
+	Speed float
+	acceleration float
+	manuverability float
+	robustness float
+}
+class AI{
+	bool doLeft
+	bool doRight
+	bool slowDown
+	bool Accelerate
+}
+class Sprite{
+	image *images[]	
+}
+class CurrentVelocity{
+	float x
+	float y
+}
+class Input{
+	bool keyLeft
+	bool keyRight
+	bool keySlow
+	bool KeyAcc
+} 
+ 
+Player *- Position
+Opponent *- Position
+Animals *- Position
+Branch *- Position
+Stone *- Position
+
+Player *- Stats
+Opponent *- Stats
+
+Player *- Sprite
+Opponent *- Sprite
+Animals *- Sprite
+Branch *- Sprite
+Stone *- Sprite
+Lane *- Sprite
+
+Player *- CurrentVelocity
+Opponent *- CurrentVelocity
+Animals *- CurrentVelocity
+Branch *- CurrentVelocity
+
+Player *- Input
+
+Opponent *- AI
+Animals *- AI
+
+
+
+
+
+
+
+
+
+
+
+
+@enduml
