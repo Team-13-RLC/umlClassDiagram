@@ -17,7 +17,7 @@ class AI{
 	bool Accelerate
 }
 class Sprite{
-	image *images[]	
+	image *images[]
 }
 class CurrentVelocity{
 	float x
@@ -28,33 +28,33 @@ class Input{
 	bool keyRight
 	bool keySlow
 	bool KeyAcc
-} 
- 
-Player *- Position
-Opponent *- Position
-Animals *- Position
-Branch *- Position
-Stone *- Position
+}
 
-Player *- Stats
-Opponent *- Stats
+Player *-- Position
+Opponent *-- Position
+Animals *-- Position
+Branch *-- Position
+Stone *-- Position
 
-Player *- Sprite
-Opponent *- Sprite
-Animals *- Sprite
-Branch *- Sprite
-Stone *- Sprite
-Lane *- Sprite
+Player *-- Stats
+Opponent *-- Stats
 
-Player *- CurrentVelocity
-Opponent *- CurrentVelocity
-Animals *- CurrentVelocity
-Branch *- CurrentVelocity
+Player *-- Sprite
+Opponent *-- Sprite
+Animals *-- Sprite
+Branch *-- Sprite
+Stone *-- Sprite
+Lane *-- Sprite
 
-Player *- Input
+Player *-- CurrentVelocity
+Opponent *-- CurrentVelocity
+Animals *-- CurrentVelocity
+Branch *-- CurrentVelocity
 
-Opponent *- AI
-Animals *- AI
+Player *-- Input
+
+Opponent *-- AI
+Animals *-- AI
 
 
 
