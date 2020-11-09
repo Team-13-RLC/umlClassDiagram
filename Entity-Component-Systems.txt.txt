@@ -10,15 +10,24 @@ class Stats{
 	manuverability float
 	robustness float
 }
-class AI{
+class BoatAI{
 	bool doLeft
 	bool doRight
 	bool slowDown
 	bool Accelerate
 }
+
+class ObstacleAI{
+	bool moveLeft
+	bool moveRight
+	bool moveUp
+	bool moveDown
+}
+
 class Sprite{
 	image *images[]
 }
+
 class CurrentVelocity{
 	float x
 	float y
@@ -53,9 +62,10 @@ Branch *-- CurrentVelocity
 
 Player *-- Input
 
-Opponent *-- AI
-Animals *-- AI
+Opponent *-- BoatAI
 
+Animals *-- ObstacleAI
+Branch *-- ObstacleAI
 
 
 
