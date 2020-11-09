@@ -4,4 +4,4 @@
 ---------------
 ## Rendered diagrams
 ![main.png](main.png)
-!ECS Diagram.png](ECS Diagram.png)
+![Entity-Component-Systems.txt.png](Entity-Component-Systems.txt.png)
