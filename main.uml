@@ -1,18 +1,29 @@
 @startuml
 
-class Sprite {
-
-}
-
-class Boat {
+class Stats {
     {field} speed: float
             acceleration: float
             maneuverability: float
             robustness: float
 }
 
-class UserBoat {
+class Sprite {
 
+}
+
+class Boat {
+    {field} stats: Stats
+
+    {method} accelerate: void
+    {method} control: void
+    {method} update: void
+
+
+}
+
+class UserBoat {
+    {method} control(): void
+    {method} update: void
 }
 
 class AIBoat{
