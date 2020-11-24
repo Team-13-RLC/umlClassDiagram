@@ -1,18 +1,29 @@
 @startuml
 
-class Sprite {
-
+class Stats {
+    {field} speed: float
+            acceleration: float
+            deceleration: float
+            maxSpeed: float
+            maneuverability: float
+            robustness: float
+            fatigue: float
 }
 
 class Boat {
-    {field} speed: float
-            acceleration: float
-            maneuverability: float
-            robustness: float
+    {field} boatStatsstats: Stats
+            boatPosition: Position
+
+    {method} accelerate(): void
+    {method} control(): void
+    {method} draw(): void
+    {method} update(): void
+
+
 }
 
 class UserBoat {
-
+    {method} control(): void
 }
 
 class AIBoat{
@@ -20,6 +31,12 @@ class AIBoat{
 }
 
 class Lane {
+    {field} lBorder: int
+            rBorder: int
+            BORDERWIDTH: int
+
+    {method} draw(): void
+    {method} getMiddle(): int
 
 }
 
@@ -73,8 +90,6 @@ Lane <|-- UserLane
 Lane <|-- AILane
 
 
-Sprite <|-- Boat
-Sprite <|-- Obstacle
 
 Boat <|-- UserBoat
 Boat <|-- AIBoat

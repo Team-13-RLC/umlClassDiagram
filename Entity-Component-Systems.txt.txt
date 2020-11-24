@@ -5,10 +5,11 @@ class Position{
 	float y
 }
 class Stats{
-	Speed float
-	acceleration float
-	manuverability float
-	robustness float
+	float speed
+	float acceleration
+	float manuverability
+	float robustness
+	float fatigue
 }
 class BoatAI{
 	bool doLeft
@@ -39,6 +40,32 @@ class Input{
 	bool KeyAcc
 }
 
+class Lane_Bounds{
+	float leftBound
+	float rightBound
+}
+
+class Collision{
+	bool isCollide
+	float reduceDurability
+	float reduceSpeed
+	bool isDestroyed
+}
+
+class Penalty{
+	float timePenalty
+}
+
+class Timer{
+	float timeTaken
+}
+
+class Distance_to_Finish{
+	float Finish_Distance
+	bool isFinished
+}
+
+
 Player *-- Position
 Opponent *-- Position
 Animals *-- Position
@@ -67,14 +94,21 @@ Opponent *-- BoatAI
 Animals *-- ObstacleAI
 Branch *-- ObstacleAI
 
+Lane *-- Lane_Bounds
 
+Player *-- Collision
+Opponent *-- Collision
+Animals *-- Collision
+Branch *-- Collision
+Stone *-- Collision
 
+Player *-- Penalty
+Opponent *-- Penalty
 
+Player *-- Timer
+Opponent *-- Timer
 
-
-
-
-
-
+Player *-- Distance_to_Finish
+Opponent *-- Distance_to_Finish
 
 @enduml
